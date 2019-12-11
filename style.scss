@@ -1,0 +1,172 @@
+//$nav-user__item: "Courier New", Courier, monospace;
+//$nav-user__item: "Merriweather", serif;
+//$nav-user__item: "Playfair Display", serif;
+//$nav-user__item: "PT Serif", serif;
+//$nav-user__item: "Lobster", serif;
+//$nav-user__item: "EB Garamond", serif;
+
+//Набор текстового оформления
+$h-0: "Roboto Slab", serif;
+$h-1: "Baskervville", serif;
+$h-size_l: 3em;
+$h-size_m: 2em;
+$h-size_s: 1.75em;
+$nav-0: "Comfortaa", cursive;
+$nav-size_l: 1.5em;
+$nav-size_m: 1.25em;
+$nav-size_s: 1em;
+$p-0: "Merriweather", serif;
+$p-size_l: 1em;
+$p-size_m: 0.9em;
+$p-size_s: 0.8em;
+
+$block-preview_bgc: rgb(215, 228, 218);
+
+$header-logo_bgc: white;
+$header-logo__text_font-family: $h-0, $h-1;
+$header-logo__text_font-size: $h-size_s;
+
+$nav-user_bgc_0: rgb(216, 235, 255);
+$nav-user__item: $nav-0;
+
+$block-direction_text: $h_0;
+$block-direction__item_font: "Merriweather", serif;
+$block-direction__item_bgc: rgb(221, 236, 216);
+
+%link-pseudo {
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    color: white;
+    background-color: #999999;
+  }
+  &:active {
+    color: black;
+  }
+}
+
+//Превью
+* {
+  box-sizing: border-box;
+}
+.block-preview {
+  padding: 10px;
+  height: 100%;
+  background-color: $block-preview_bgc;
+
+  &_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__logo {
+    width: 70%;
+  }
+  &__text {
+    font-family: $h-0, $h-1;
+    font-size: $h-size_l;
+  }
+}
+
+.header-logo {
+  height: auto;
+  padding: 10px 20px 0px;
+  background-color: $header-logo_bgc;
+
+  &_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img {
+    width: 15%;
+  }
+  &__text {
+    font-family: $h-0;
+    font-size: $h-size_m;
+  }
+}
+.nav-user {
+  background-color: $nav-user_bgc_0;
+
+  &_flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__item {
+    text-decoration: none;
+    font-size: $nav-size_s;
+    font-family: $nav-0;
+    padding: 20px 10px;
+
+    &_link {
+      @extend %link-pseudo;
+    }
+    &_disabled {
+      display: none;
+    }
+  }
+}
+.block-direction {
+  padding: 20px;
+
+  &_position {
+    width: 70%;
+    margin: auto;
+  }
+
+  &__text {
+    font-size: $h-size_s;
+    text-align: center;
+    font-family: $h-0;
+    padding: 20px;
+  }
+  &__item {
+   
+    &_font {
+      font-family: $p-0;
+      font-size: $p-size_l;
+      text-align: center;
+    }
+  }
+  &__li {
+    padding: 10px;
+    margin: 10px;
+    background-color: $block-direction__item_bgc;
+
+    &_flex {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.block-service {
+  &_position {
+    width: 70%;
+    margin: auto;
+  }
+  &__text {
+  }
+  &__offer {
+  }
+  &__offer-button-bar {
+  }
+  &__offer-price {
+  }
+  &__offer-price-card {
+  }
+  &__offer-price-card-header {
+  }
+  &__offer-price-card-cost {
+  }
+  &__offer-price-card-text {
+  }
+  &__offer-price-card-button {
+  }
+}

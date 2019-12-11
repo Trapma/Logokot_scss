@@ -1,0 +1,16 @@
+body {
+  background: lightblue;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 10px;
+}
+
+.nav {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
