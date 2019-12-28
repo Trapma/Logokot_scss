@@ -122,12 +122,12 @@
   border-radius: 1%;
 }
 
-.block-direction_position {
+.block-direction__contaner {
   width: 70%;
   margin: auto;
 }
 
-.block-direction__item_flex {
+.block-direction__item_grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -157,7 +157,12 @@
           flex-direction: column;
 }
 
-.block-service_position {
+.block-service {
+  padding: 20px;
+  border-radius: 1%;
+}
+
+.block-service__contaner {
   width: 70%;
   margin: auto;
 }

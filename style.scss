@@ -135,17 +135,16 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
   background-color: $block-direction_bgc;
   border-radius: 1%;
 
-  &_position {
+  &__contaner {
     width: 70%;
     margin: auto;
   }
-
   &__text {
     @extend %h2;
   }
   &__item {
-    &_flex {
-      display:grid;
+    &_grid {
+      display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 10px;
     }
@@ -167,14 +166,14 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
   }
 }
 .block-service {
-  &_position {
+  padding: 20px;
+  border-radius: 1%;
+  &__contaner {
     width: 70%;
     margin: auto;
   }
   &__text {
     @extend %h2;
-  }
-  &__offer {
   }
   &__button-bar {
     padding: 15px;
@@ -199,9 +198,9 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
       text-align: left;
     }
   }
-  &__active{
-    &:after{
-      content:"\2796";
+  &__active {
+    &:after {
+      content: "\2796";
     }
   }
   &__price {
@@ -212,15 +211,15 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     transition: max-height 0.5s ease-in-out;
 
     &_position {
-     grid-template-columns: 1fr 1fr;
-     grid-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
     }
   }
   &__card {
     font-family: $p-0;
     font-size: $p-size_l;
     border: 1px solid rgb(228, 228, 228);
-    
+
     border-radius: 5px;
   }
   &__card-header {
