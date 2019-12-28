@@ -20,18 +20,26 @@ $p-size_l: 1em;
 $p-size_m: 0.9em;
 $p-size_s: 0.8em;
 
+$body_bgc: white;
+
 $block-preview_bgc: rgb(215, 228, 218);
 
-$header-logo_bgc: white;
+$header-logo_bgc: rgb(255, 255, 255);
+$header-logo_text_color: rgb(0, 0, 0);
 $header-logo__text_font-family: $h-0, $h-1;
 $header-logo__text_font-size: $h-size_s;
 
 $nav-user_bgc_0: rgb(216, 235, 255);
 $nav-user__item: $nav-0;
 
+$block-direction_bgc: rgb(255, 255, 255);
 $block-direction_text: $h_0;
 $block-direction__item_font: "Merriweather", serif;
 $block-direction__item_bgc: rgb(221, 236, 216);
+
+//карта офера
+$block-service__offer-button-bar: #faad7a; //кнопка-бар оффера
+$block-service__card-header_bgc: #ffe4c4; //заголовок карточки
 
 %link-pseudo {
   &:link {
@@ -48,8 +56,16 @@ $block-direction__item_bgc: rgb(221, 236, 216);
     color: black;
   }
 }
+%h2 {
+  font-size: $h-size_s;
+  text-align: center;
+  font-family: $h-0;
+  padding: 20px;
+}
 
-//Превью
+.body {
+  background-color: $body_bgc;
+}
 * {
   box-sizing: border-box;
 }
@@ -89,6 +105,7 @@ $block-direction__item_bgc: rgb(221, 236, 216);
   &__text {
     font-family: $h-0;
     font-size: $h-size_m;
+    color: $header-logo_text_color;
   }
 }
 .nav-user {
@@ -115,6 +132,8 @@ $block-direction__item_bgc: rgb(221, 236, 216);
 }
 .block-direction {
   padding: 20px;
+  background-color: $block-direction_bgc;
+  border-radius: 1%;
 
   &_position {
     width: 70%;
@@ -122,13 +141,14 @@ $block-direction__item_bgc: rgb(221, 236, 216);
   }
 
   &__text {
-    font-size: $h-size_s;
-    text-align: center;
-    font-family: $h-0;
-    padding: 20px;
+    @extend %h2;
   }
   &__item {
-   
+    &_flex {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
     &_font {
       font-family: $p-0;
       font-size: $p-size_l;
@@ -137,7 +157,7 @@ $block-direction__item_bgc: rgb(221, 236, 216);
   }
   &__li {
     padding: 10px;
-    margin: 10px;
+    border-radius: 10px;
     background-color: $block-direction__item_bgc;
 
     &_flex {
@@ -152,21 +172,94 @@ $block-direction__item_bgc: rgb(221, 236, 216);
     margin: auto;
   }
   &__text {
+    @extend %h2;
   }
   &__offer {
   }
-  &__offer-button-bar {
+  &__button-bar {
+    padding: 15px;
+    margin: 5px 0px;
+    width: 100%;
+    background-color: $block-service__offer-button-bar;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.4s;
+    &:after {
+      content: "\02795";
+      float: right;
+    }
+    &:hover {
+      background-color: #ccc;
+    }
+    &_text {
+      font-family: $p-0;
+      font-size: $nav-size_m;
+      text-align: left;
+    }
   }
-  &__offer-price {
+  &__active{
+    &:after{
+      content:"\2796";
+    }
   }
-  &__offer-price-card {
+  &__price {
+    display: grid;
+    margin: 5px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.5s ease-in-out;
+
+    &_position {
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 10px;
+    }
   }
-  &__offer-price-card-header {
+  &__card {
+    font-family: $p-0;
+    font-size: $p-size_l;
+    border: 1px solid rgb(228, 228, 228);
+    
+    border-radius: 5px;
   }
-  &__offer-price-card-cost {
+  &__card-header {
+    background-color: $block-service__card-header_bgc;
+    padding: 15px;
+    text-align: center;
   }
-  &__offer-price-card-text {
+  &__card-cost {
+    background-color: lightgrey;
+    padding: 10px;
   }
-  &__offer-price-card-button {
+  &__card-text {
+    padding: 10px;
+    border-bottom: 1px solid rgb(240, 238, 238);
+  }
+  &__card-button {
+    background-color: white;
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+  }
+}
+.button-price {
+  background-color: rgb(77, 169, 77);
+  width: 100%;
+  font-family: $p-0;
+  font-size: $p-size_l;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px #999;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(65, 138, 65);
+  }
+  &:active {
+    background-color: rgb(65, 138, 65);
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
   }
 }

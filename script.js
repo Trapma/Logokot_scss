@@ -7,5 +7,6 @@ function navBar () {
         x.className = "noact";
     }
 }
-
+var listItems = document.getElementById("our-headline").getElementsByTagName("h1"); 
+var listItems1  = document.getElementById("our-headline").getElementsByTagName("h1");
 

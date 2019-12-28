@@ -21,12 +21,12 @@
 
 </head>
 
-<body>
+<body class="body">
 
   <header class="header-logo header-logo_flex">
     <!--логотип и информация что это речевой кабинет-->
     <img class="header-logo__img" src="img/logo_mini.svg" alt="Логокот" />
-    <h1 class="header-logo__text">Речевой кабинет</h1>
+    <h1 id="our-headline" class="header-logo__text">Речевой кабинет</h1>
   </header>
   <!--Навигационная панель-->
   <nav class="nav-user nav-user_flex nav-user_text" class="noact" id="button_bar">
@@ -41,81 +41,84 @@
   <!--Блок направления-->
   <section class="block-direction block-direction_position">
     <h2 class="block-direction__text">Направления</h2>
-    <ul class="block-direction__item block-direction__item_font ">
-      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Speech.svg" alt=""> <span>Постановка правильного звукопроизношения</span></li>
-      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Kid.svg" alt=""> <span> Запуск речи у неговорящих детей</span></li>
-      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 45 Quest Kid.svg" alt=""> <span> Коррекция речи психоречевого развития</span></li>
-      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Test.svg" alt=""> <span> Исправление нарушения чтения и письма</span></li>
-      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Puzzle.svg" alt=""> <span> Исправление нарушения внимания, памяти и поведения</span></li>
-      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Psychology.svg" alt=""> <span> Коррекция когнитивного развития</span></li>
+    <ul class="block-direction__item block-direction__item_font block-direction__item_flex ">
+      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Speech.svg" alt="">
+        <span>Постановка правильного звукопроизношения</span></li>
+      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Kid.svg" alt=""> <span>
+          Запуск речи у неговорящих детей</span></li>
+      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 45 Quest Kid.svg" alt="">
+        <span> Коррекция речи психоречевого развития</span></li>
+      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Test.svg" alt=""> <span>
+          Исправление нарушения чтения и письма</span></li>
+      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Puzzle.svg" alt="">
+        <span> Исправление нарушения внимания, памяти и поведения</span></li>
+      <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Psychology.svg" alt="">
+        <span> Коррекция когнитивного развития</span></li>
     </ul>
   </section>
   <!--Блок услуги-->
   <section class="block-service block-service_position">
     <h2 class="block-service__text">Услуги</h2>
     <div class="block-service__offer">
-      <button class="block-service__offer-button-bar">Консультации</button>
-
-      <div class="block-service__offer-price">
-        <ul class="block-service__offer-price-card">
-          <li class="block-service__offer-price-card-header">Логопед</li>
-          <li class="block-service__offer-price-card-cost">&#8381 600</li>
-          <li class="block-service__offer-price-card-text">Разовое занятие</li>
-          <li class="block-service__offer-price-card-text">Продолжительность 40 минут</li>
-          <li class="block-service__offer-price-card-text">Дети от 2-х лет</li>
-          <li class="block-service__offer-price-card-button"><button>Записаться</button></li>
+      <button class="block-service__button-bar block-service__button-bar_text">Консультации</button>
+      <div class="block-service__price block-service__price_position">
+        <ul class="block-service__card block-service__card_text">
+          <li class="block-service__card-header">Логопед</li>
+          <li class="block-service__card-cost">&#8381 600</li>
+          <li class="block-service__card-text">Разовое занятие</li>
+          <li class="block-service__card-text">Продолжительность 40 минут</li>
+          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
-        <ul class="block-service__offer-price-card">
-          <li class="block-service__offer-price-card-header">Психолог</li>
-          <li class="block-service__offer-price-card-cost">&#8381 600</li>
-          <li class="block-service__offer-price-card-text">Разовое занятие</li>
-          <li class="block-service__offer-price-card-text">Продолжительность 40 минут</li>
-          <li class="block-service__offer-price-card-text">Дети от 2-х лет</li>
-          <li class="block-service__offer-price-card-button"><button>Записаться</button></li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <button class="accordion">Занятия с логопедом</button>
-      <div class="price">
-        <ul class="card">
-          <li class="header">Индивидуальное занятие</li>
-          <li class="grey">&#8381 4000 / месяц</li>
-          <li>8 занятий / 2 раза в неделю</li>
-          <li>Продолжительность 30 минут</li>
-          <li>Дети от 2-х лет</li>
-          <li class="grey"><button>Записаться</button></li>
-        </ul>
-        <ul class="card">
-          <li class="header">Индивидуальное занятие</li>
-          <li class="grey">&#8381 2000 / месяц</li>
-          <li>4 занятия / 1 раз в неделю</li>
-          <li>Продолжительность 30 минут</li>
-          <li>Дети от 2-х лет</li>
-          <li class="grey"><button>Записаться</button></li>
+        <ul class="block-service__card">
+          <li class="block-service__card-header">Психолог</li>
+          <li class="block-service__card-cost">&#8381 600</li>
+          <li class="block-service__card-text">Разовое занятие</li>
+          <li class="block-service__card-text">Продолжительность 40 минут</li>
+          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
       </div>
     </div>
     <div>
-      <button class="accordion">Занятия с психологом</button>
-      <div class="price">
-        <ul class="card">
-          <li class="header">Индивидуальное занятие</li>
-          <li class="grey">&#8381 4800 / месяц</li>
-          <li>8 занятий / 2 раза в неделю</li>
-          <li>Продолжительность 40 минут</li>
-          <li>Дети от 2-х лет</li>
-          <li class="grey"><button>Записаться</button></li>
+      <button class="block-service__button-bar block-service__button-bar_text">Занятия с логопедом</button>
+      <div class="block-service__price block-service__price_position">
+        <ul class="block-service__card block-service__card_text">
+          <li class="block-service__card-header">Индивидуальное занятие</li>
+          <li class="block-service__card-cost">&#8381 4000 / месяц</li>
+          <li class="block-service__card-text">8 занятий / 2 раза в неделю</li>
+          <li class="block-service__card-text">Продолжительность 30 минут</li>
+          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
-        <ul class="card">
-          <li class="header">Индивидуальное занятие</li>
-          <li class="grey">&#8381 2400 / месяц</li>
-          <li>4 занятия / 1 раз в неделю</li>
-          <li>Продолжительность 40 минут</li>
-          <li>Дети от 2-х лет</li>
-          <li class="grey">
-            <form action="" method="post"><button name="sub">Записаться</button></form>
-          </li>
+        <ul class="block-service__card block-service__card_text">
+          <li class="block-service__card-header">Индивидуальное занятие</li>
+          <li class="block-service__card-cost">&#8381 2000 / месяц</li>
+          <li class="block-service__card-text">4 занятия / 1 раз в неделю</li>
+          <li class="block-service__card-text">Продолжительность 30 минут</li>
+          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <button class="block-service__button-bar block-service__button-bar_text">Занятия с психологом</button>
+      <div class="block-service__price block-service__price_position">
+        <ul class="block-service__card">
+          <li class="block-service__card-header">Индивидуальное занятие</li>
+          <li class="block-service__card-cost">&#8381 4800 / месяц</li>
+          <li class="block-service__card-text">8 занятий / 2 раза в неделю</li>
+          <li class="block-service__card-text">Продолжительность 40 минут</li>
+          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
+        </ul>
+        <ul class="block-service__card">
+          <li class="block-service__card-header">Индивидуальное занятие</li>
+          <li class="block-service__card-cost">&#8381 2400 / месяц</li>
+          <li class="block-service__card-text">4 занятия / 1 раз в неделю</li>
+          <li class="block-service__card-text">Продолжительность 40 минут</li>
+          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
       </div>
   </section>
@@ -219,7 +222,7 @@
               style="width:37px; height: 37px;" alt="instagram-icon-icons-com-66804"></a></li>
       </ul>
     </div>
-   -->>
+    -->>
 
 
 
@@ -236,19 +239,18 @@
   </section>
 
   <script>
-    var acc = document.getElementsByClassName("accordion");
+    var acc = document.getElementsByClassName("block-service__button-bar");
     var i;
 
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click",
         function () {
-          this.classList.toggle("active");
+          this.classList.toggle("block-service__active");
           var panel = this.nextElementSibling;
           if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
           } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
-            console.log(panel.scrollHeight)
           }
         });
     }

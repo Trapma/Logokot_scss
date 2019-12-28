@@ -15,6 +15,17 @@
   color: black;
 }
 
+.block-direction__text, .block-service__text {
+  font-size: 1.75em;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  padding: 20px;
+}
+
+.body {
+  background-color: white;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -75,6 +86,7 @@
 .header-logo__text {
   font-family: "Roboto Slab", serif;
   font-size: 2em;
+  color: black;
 }
 
 .nav-user {
@@ -106,6 +118,8 @@
 
 .block-direction {
   padding: 20px;
+  background-color: white;
+  border-radius: 1%;
 }
 
 .block-direction_position {
@@ -113,11 +127,12 @@
   margin: auto;
 }
 
-.block-direction__text {
-  font-size: 1.75em;
-  text-align: center;
-  font-family: "Roboto Slab", serif;
-  padding: 20px;
+.block-direction__item_flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .block-direction__item_font {
@@ -128,7 +143,7 @@
 
 .block-direction__li {
   padding: 10px;
-  margin: 10px;
+  border-radius: 10px;
   background-color: #ddecd8;
 }
 
@@ -145,5 +160,108 @@
 .block-service_position {
   width: 70%;
   margin: auto;
+}
+
+.block-service__button-bar {
+  padding: 15px;
+  margin: 5px 0px;
+  width: 100%;
+  background-color: #faad7a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.block-service__button-bar:after {
+  content: "\02795";
+  float: right;
+}
+
+.block-service__button-bar:hover {
+  background-color: #ccc;
+}
+
+.block-service__button-bar_text {
+  font-family: "Merriweather", serif;
+  font-size: 1.25em;
+  text-align: left;
+}
+
+.block-service__active:after {
+  content: "\2796";
+}
+
+.block-service__price {
+  display: -ms-grid;
+  display: grid;
+  margin: 5px;
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.block-service__price_position {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.block-service__card {
+  font-family: "Merriweather", serif;
+  font-size: 1em;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+}
+
+.block-service__card-header {
+  background-color: #ffe4c4;
+  padding: 15px;
+  text-align: center;
+}
+
+.block-service__card-cost {
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.block-service__card-text {
+  padding: 10px;
+  border-bottom: 1px solid #f0eeee;
+}
+
+.block-service__card-button {
+  background-color: white;
+  padding: 10px;
+  width: 40%;
+  margin: auto;
+}
+
+.button-price {
+  background-color: #4da94d;
+  width: 100%;
+  font-family: "Merriweather", serif;
+  font-size: 1em;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px #999;
+          box-shadow: 0 4px #999;
+  cursor: pointer;
+}
+
+.button-price:hover {
+  background-color: #418a41;
+}
+
+.button-price:active {
+  background-color: #418a41;
+  -webkit-box-shadow: 0 2px #666;
+          box-shadow: 0 2px #666;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 /*# sourceMappingURL=style.css.map */
