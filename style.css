@@ -15,11 +15,22 @@
   color: black;
 }
 
-.block-direction__text, .block-service__text {
+.block-direction__text, .block-service__text, .block-teachers__text, .block-about__text {
   font-size: 1.75em;
   text-align: center;
   font-family: "Roboto Slab", serif;
   padding: 20px;
+}
+
+.block-direction, .block-service, .block-teachers, .block-about {
+  padding: 20px;
+  background-color: white;
+  border-radius: 1%;
+}
+
+.block-direction__contaner, .block-service__contaner, .block-teachers__contaner, .block-about__contaner {
+  width: 70%;
+  margin: auto;
 }
 
 .body {
@@ -107,24 +118,13 @@
 
 .nav-user__item {
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.25em;
   font-family: "Comfortaa", cursive;
   padding: 20px 10px;
 }
 
 .nav-user__item_disabled {
   display: none;
-}
-
-.block-direction {
-  padding: 20px;
-  background-color: white;
-  border-radius: 1%;
-}
-
-.block-direction__contaner {
-  width: 70%;
-  margin: auto;
 }
 
 .block-direction__item_grid {
@@ -137,7 +137,7 @@
 
 .block-direction__item_font {
   font-family: "Merriweather", serif;
-  font-size: 1em;
+  font-size: 1.15em;
   text-align: center;
 }
 
@@ -155,16 +155,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.block-service {
-  padding: 20px;
-  border-radius: 1%;
-}
-
-.block-service__contaner {
-  width: 70%;
-  margin: auto;
 }
 
 .block-service__button-bar {
@@ -191,7 +181,7 @@
 
 .block-service__button-bar_text {
   font-family: "Merriweather", serif;
-  font-size: 1.25em;
+  font-size: 1.35em;
   text-align: left;
 }
 
@@ -203,6 +193,9 @@
   display: -ms-grid;
   display: grid;
   margin: 5px;
+}
+
+.block-service__price_accordion {
   overflow: hidden;
   max-height: 0px;
   -webkit-transition: max-height 0.5s ease-in-out;
@@ -217,28 +210,31 @@
 
 .block-service__card {
   font-family: "Merriweather", serif;
-  font-size: 1em;
   border: 1px solid #e4e4e4;
   border-radius: 5px;
 }
 
 .block-service__card-header {
   background-color: #ffe4c4;
+  font-size: 1.15em;
   padding: 15px;
   text-align: center;
 }
 
 .block-service__card-cost {
   background-color: lightgrey;
+  font-size: 1.15em;
   padding: 10px;
 }
 
 .block-service__card-text {
+  font-size: 1em;
   padding: 10px;
   border-bottom: 1px solid #f0eeee;
 }
 
 .block-service__card-button {
+  font-size: 1em;
   background-color: white;
   padding: 10px;
   width: 40%;
@@ -249,7 +245,7 @@
   background-color: #4da94d;
   width: 100%;
   font-family: "Merriweather", serif;
-  font-size: 1em;
+  font-size: 1.15em;
   padding: 5px;
   border: none;
   border-radius: 5px;
@@ -268,5 +264,96 @@
           box-shadow: 0 2px #666;
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
+}
+
+.block-teachers__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 10px 0px;
+  grid-gap: 0px 20px;
+}
+
+.block-teachers__face {
+  width: 100%;
+}
+
+.block-teachers__card {
+  font-family: p-0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.block-teachers__name {
+  font-size: 1.15em;
+  text-align: center;
+  padding: 15px;
+}
+
+.block-teachers__title {
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+}
+
+.block-teachers__exp {
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+}
+
+.block-teachers__about {
+  font-size: 0.9em;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+}
+
+.block-teachers__social {
+  text-align: center;
+  padding: 10px;
+}
+
+.block-teachers__phone {
+  text-align: center;
+  font-size: 1.15em;
+  padding: 10px;
+}
+
+.block-teachers__phone_button {
+  background-color: #c1c1c1;
+  width: 50px;
+  font-family: "Merriweather", serif;
+  font-size: 1.15em;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.block-teachers__phone_button:active {
+  background-color: #525252;
+}
+
+.block-about__card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.block-about__contact {
+  font-family: "Merriweather", serif;
+  font-size: 1.15em;
+}
+
+.block-about__head {
+  padding: 15px;
+  text-align: center;
+}
+
+.block-about__info {
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */
