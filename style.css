@@ -415,8 +415,20 @@
 .block-about__card {
   display: -ms-grid;
   display: grid;
+  grid-gap: 10px;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 720px) {
+  .block-about__card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.block-about__map {
+  width: 100%;
 }
 
 .block-about__contact {
@@ -433,6 +445,7 @@
 .block-about__info {
   padding: 10px;
   border-bottom: 1px solid lightgrey;
+  line-height: 20px;
 }
 
 .block-footer__info {
