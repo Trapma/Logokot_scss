@@ -25,7 +25,9 @@
 
   <header class="header-logo header-logo_flex">
     <!--логотип и информация что это речевой кабинет-->
-    <img class="header-logo__img" src="img/logo_mini.svg" alt="Логокот" />
+    <div class="header-logo__img">
+      <img  src="img/logo_mini.svg" alt="Логокот" />
+    </div>
     <h1 id="our-headline" class="header-logo__text">Речевой кабинет</h1>
   </header>
   <!--Навигационная панель-->
@@ -48,12 +50,12 @@
         <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Kid.svg" alt=""> <span>
             Запуск речи у неговорящих детей</span></li>
         <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 45 Quest Kid.svg" alt="">
-          <span> Коррекция речи психоречевого развития</span></li>
+          <span> Коррекция психоречевого развития</span></li>
         <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Test.svg" alt="">
           <span>
             Исправление нарушения чтения и письма</span></li>
         <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Puzzle.svg" alt="">
-          <span> Исправление нарушения внимания, памяти и поведения</span></li>
+          <span> Подготовка к школе</span></li>
         <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Psychology.svg" alt="">
           <span> Коррекция когнитивного развития</span></li>
       </ul>
@@ -67,18 +69,20 @@
       <div class="block-service__price block-service__price_position block-service__price_accordion">
         <ul class="block-service__card block-service__card_text">
           <li class="block-service__card-header">Логопед</li>
-          <li class="block-service__card-cost">&#8381 600</li>
-          <li class="block-service__card-text">Разовое занятие</li>
-          <li class="block-service__card-text">Продолжительность 40 минут</li>
-          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-cost">&#8381 700</li>
+          <li class="block-service__card-text">Продолжительность 30 минут</li>
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
         <ul class="block-service__card">
-          <li class="block-service__card-header">Психолог</li>
-          <li class="block-service__card-cost">&#8381 600</li>
-          <li class="block-service__card-text">Разовое занятие</li>
+          <li class="block-service__card-header">Дефектолог</li>
+          <li class="block-service__card-cost">&#8381 700</li>
+          <li class="block-service__card-text">Продолжительность 30 минут</li>
+          <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
+        </ul>
+        <ul class="block-service__card block-service__card_text">
+          <li class="block-service__card-header">Специалист по подготовке к школе</li>
+          <li class="block-service__card-cost">&#8381 700</li>
           <li class="block-service__card-text">Продолжительность 40 минут</li>
-          <li class="block-service__card-text">Дети от 2-х лет</li>
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
       </div>
@@ -86,39 +90,39 @@
       <button class="block-service__button-bar block-service__button-bar_text">Занятия с логопедом</button>
       <div class="block-service__price block-service__price_position block-service__price_accordion">
         <ul class="block-service__card block-service__card_text">
-          <li class="block-service__card-header">Индивидуальное занятие</li>
-          <li class="block-service__card-cost">&#8381 4000 / месяц</li>
+          <li class="block-service__card-header">Абонемент на индивидуальные занятия</li>
+          <li class="block-service__card-cost">&#8381 4800 / месяц</li>
           <li class="block-service__card-text">8 занятий / 2 раза в неделю</li>
           <li class="block-service__card-text">Продолжительность 30 минут</li>
           <li class="block-service__card-text">Дети от 2-х лет</li>
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
         <ul class="block-service__card block-service__card_text">
-          <li class="block-service__card-header">Индивидуальное занятие</li>
-          <li class="block-service__card-cost">&#8381 2000 / месяц</li>
-          <li class="block-service__card-text">4 занятия / 1 раз в неделю</li>
-          <li class="block-service__card-text">Продолжительность 30 минут</li>
-          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-header">Абонимент на занятия в группе для детей с ОНР</li>
+          <li class="block-service__card-cost">&#8381 3200 / месяц</li>
+          <li class="block-service__card-text">8 занятий / 2 раза в неделю</li>
+          <li class="block-service__card-text">Продолжительность 60 минут</li>
+          <li class="block-service__card-text">Дети 5-6 лет</li>
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
       </div>
 
-      <button class="block-service__button-bar block-service__button-bar_text">Занятия с психологом</button>
+      <button class="block-service__button-bar block-service__button-bar_text">Занятия с дефектологом</button>
       <div class="block-service__price block-service__price_position block-service__price_accordion">
         <ul class="block-service__card">
-          <li class="block-service__card-header">Индивидуальное занятие</li>
+          <li class="block-service__card-header">Абонимент на индивидуальные занятия</li>
           <li class="block-service__card-cost">&#8381 4800 / месяц</li>
           <li class="block-service__card-text">8 занятий / 2 раза в неделю</li>
-          <li class="block-service__card-text">Продолжительность 40 минут</li>
+          <li class="block-service__card-text">Продолжительность 30 минут</li>
           <li class="block-service__card-text">Дети от 2-х лет</li>
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
         <ul class="block-service__card">
-          <li class="block-service__card-header">Индивидуальное занятие</li>
-          <li class="block-service__card-cost">&#8381 2400 / месяц</li>
+          <li class="block-service__card-header">Групповые занятия по подготовке к школе с дефектологом</li>
+          <li class="block-service__card-cost">&#8381 3200 / месяц</li>
           <li class="block-service__card-text">4 занятия / 1 раз в неделю</li>
-          <li class="block-service__card-text">Продолжительность 40 минут</li>
-          <li class="block-service__card-text">Дети от 2-х лет</li>
+          <li class="block-service__card-text">Продолжительность 60 минут</li>
+          <li class="block-service__card-text">Дети 5-6 лет</li>
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
       </div>
@@ -126,19 +130,18 @@
   </section>
   <!--блок преподаватели-->
 
-
-  <section class="block-teachers">
+  <!-- Старая версия
+<section class="block-teachers">
     <div class="block-teachers__contaner">
       <h2 class="block-teachers__text">Преподаватели</h2>
 
       <div class="block-teachers__info">
 
-        <img class="block-teachers__face" src="img/elena_1.jpg" alt="">
+        <img class="block-teachers__face" src="img/personal_elena.jpg" alt="">
         <div class="block-teachers__card">
           <ul>
-            <li class="block-teachers__name">Трапезникова Елена</li>
+            <li class="block-teachers__name">Трапезникова Елена Олеговна</li>
             <li class="block-teachers__title">Логопед</li>
-            <li class="block-teachers__exp">Стаж работы: 5 лет</li>
             <li class="block-teachers__about">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur repellat eveniet labore
                 at accusamus.
@@ -156,12 +159,11 @@
       </div>
 
       <div class="block-teachers__info">
-        
+
         <div class="block-teachers__card">
           <ul>
-            <li class="block-teachers__name">Трапезникова Елена</li>
+            <li class="block-teachers__name">Руденко Яна Анатольевна</li>
             <li class="block-teachers__title">Логопед-дефектолог</li>
-            <li class="block-teachers__exp">Стаж работы: 5 лет</li>
             <li class="block-teachers__about">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur repellat eveniet labore
                 at accusamus.
@@ -183,9 +185,8 @@
         <img class="block-teachers__face" src="img/elena_run.jpg" alt="">
         <div class="block-teachers__card">
           <ul>
-            <li class="block-teachers__name">Трапезникова Елена</li>
-            <li class="block-teachers__title">Логопед-дефектолог</li>
-            <li class="block-teachers__exp">Стаж работы: 5 лет</li>
+            <li class="block-teachers__name">Дробаха Дарья Васильевна</li>
+            <li class="block-teachers__title">Логопед</li>
             <li class="block-teachers__about">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur repellat eveniet labore
                 at accusamus.
@@ -203,6 +204,28 @@
 
       </div>
 
+      <div class="block-teachers__info">
+        <div class="block-teachers__card">
+          <ul>
+            <li class="block-teachers__name">Квашина Юлия Сергеевна</li>
+            <li class="block-teachers__title">Специалист по подготовке к школе (дефектолог - стажёр)</li>
+            <li class="block-teachers__about">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur repellat eveniet labore
+                at accusamus.
+              </p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque a alias maiores autem? Quo, velit.
+              </p>
+            </li>
+            <li class="block-teachers__social"><a href="#"><img src="img/instagram-icon-icons-com-66804.svg"
+                  style="width:37px; height: 37px;" alt="instagram-icon-icons-com-66804"></a></li>
+            <li class="block-teachers__phone"><button class="block-teachers__phone_button"><i
+                  class="fa fa-phone"></i></button> Заказать обратный звонок</li>
+          </ul>
+
+        </div>
+        <img class="block-teachers__face" src="img/elena_run.jpg" alt="">
+      </div>
+
     </div>
   </section>
   <section class="block-about">
@@ -217,7 +240,7 @@
         <div class="block-about__contact">
           <ul>
             <li class="block-about__head"><strong>Контакты</strong></li>
-            <li class="block-about__info"> <strong>АДРЕС</strong>: <br><br> Артем, Амурская 21, Семейный центр
+            <li class="block-about__info"> <strong>АДРЕС</strong>: <br> <br> Артем, Амурская 21, Семейный центр
               «Кругозор» каб. 303</li>
             <li class="block-about__info"><strong>ТЕЛЕФОН</strong>: <br> <br>+7(953) 20 86 106</li>
             <li class="block-about__info"><strong>СОЦ СЕТИ</strong>: <br> <br><a href="#"><img
@@ -226,22 +249,74 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+-->
 
+  <section class="block-teachers">
+    <div class="block-teachers__contaner block-teachers__contaner_position">
+      <div class="block-teachers__card">
+        <div class="block-teachers__image">
+          <img src="img/personal_elena.jpg" alt="">
+        </div>
+        <div class="block-teachers__info">
+          <p class="block-teachers__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquid.</p>
+          <p class="block-teachers__prof">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi.</p>
+        </div>
+      </div>
+
+      <div class="block-teachers__card">
+        <div class="block-teachers__image">
+          <img src="img/Елена.jpg" alt="">
+        </div>
+        <div class="block-teachers__info">
+          <p class="block-teachers__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquid.</p>
+          <p class="block-teachers__prof">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi.</p>
+        </div>
+      </div>
+
+      <div class="block-teachers__card">
+        <div class="block-teachers__image">
+          <img src="img/elena_hat.jpg" alt="">
+        </div>
+        <div class="block-teachers__info">
+          <p class="block-teachers__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquid.</p>
+          <p class="block-teachers__prof">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi.</p>
+        </div>
+      </div>
+
+      <div class="block-teachers__card">
+        <div class="block-teachers__image">
+          <img src="img/elena_run.jpg" alt="">
+        </div>
+        <div class="block-teachers__info">
+          <p class="block-teachers__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquid.</p>
+          <p class="block-teachers__prof">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi.</p>
+        </div>
+      </div>
 
     </div>
 
-
-
-
   </section>
+
   <section>
-    <div class="galery">
+
+    <div class="block-galery">
 
     </div>
   </section>
 
-  <section>
-    <div class="footer"></div>
+  <section class="block-footer">
+    <div class="block-footer__contaner">
+      <div class="block-footer__logo"><img src="/img/logo_mini.svg" alt="Речевой кабинет ЛОГОКОТ"></div>
+      <li>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+      </li>
+    </div>
   </section>
 
   <script>
