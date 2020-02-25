@@ -416,12 +416,18 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
     @media screen and (max-width: 720px) {
+      padding: 0px 50px;
       grid-template-columns: 1fr;
     }
   }
   &__map {
     width: 100%;
+    height: 400px;
+    @media screen and (max-width: 550px) {
+      height: 300px;
+    }
   }
+
   &__contact {
     font-family: $p-0;
     font-size: $p-size_m;

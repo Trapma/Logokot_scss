@@ -17,6 +17,12 @@
     href="https://fonts.googleapis.com/css?family=Comfortaa|EB+Garamond|Lobster|Merriweather|PT+Serif|Playfair+Display&display=swap"
     rel="stylesheet">
 
+  <!--Добавление API для 2гис-->
+
+  <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
+
+
+
 
 
 </head>
@@ -237,8 +243,8 @@
           <img src="img/personal_elena.jpg" alt="">
         </div>
         <div class="block-teachers__info">
-          <p class="block-teachers__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquid.</p>
-          <p class="block-teachers__prof">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi.</p>
+          <p class="block-teachers__name">Трапезникова Елена Олеговна</p>
+          <p class="block-teachers__prof">Логопед</p>
         </div>
       </div>
 
@@ -247,8 +253,8 @@
           <img src="img/Елена.jpg" alt="">
         </div>
         <div class="block-teachers__info">
-          <p class="block-teachers__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquid.</p>
-          <p class="block-teachers__prof">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi.</p>
+          <p class="block-teachers__name">Руденко Яна Анатольевна</p>
+          <p class="block-teachers__prof">Дефектолог</p>
         </div>
       </div>
 
@@ -257,18 +263,18 @@
           <img src="img/elena_hat.jpg" alt="">
         </div>
         <div class="block-teachers__info">
-          <p class="block-teachers__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquid.</p>
-          <p class="block-teachers__prof">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi.</p>
+          <p class="block-teachers__name">Дробаха Дарья Васильевна</p>
+          <p class="block-teachers__prof">Логопед</p>
         </div>
       </div>
 
       <div class="block-teachers__card">
         <div class="block-teachers__image">
-          <img src="img/elena_run.jpg" alt="">
+          <img src="img/Юлия Сергеевна.jpg" alt="">
         </div>
         <div class="block-teachers__info">
-          <p class="block-teachers__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquid.</p>
-          <p class="block-teachers__prof">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi.</p>
+          <p class="block-teachers__name">Квашина Юлия Сергеевна</p>
+          <p class="block-teachers__prof">Специалист по подготовке к школе (дефектолог - стажёр)</p>
         </div>
       </div>
 
@@ -287,11 +293,9 @@
     <div class="block-about__contaner">
       <h2 class="block-about__text">О нас</h2>
       <div class="block-about__card">
-        <div class="block-about__map">
-          <script type="text/javascript" charset="utf-8" async
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A66e030df4a3bbc771b9719506aefb2c5f162022f9d6daabb8f1bbe65c90e47ad&amp;width=400&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
-            </script>
-        </div>
+        <!--карта 2гис-->
+        <div id="map" class="block-about__map"></div>
+
         <div class="block-about__contact">
           <ul>
             <li class="block-about__head"><strong>Контакты</strong></li>
@@ -304,6 +308,8 @@
           </ul>
         </div>
       </div>
+
+    </div>
     </div>
   </section>
 
@@ -319,7 +325,23 @@
       </li>
     </div>
   </section>
-
+  <script>
+    DG.then(function () {
+      var map = DG.map('map', {
+        center: [43.356312, 132.171668],
+        zoom: 16,
+        dragging: false,
+        touchZoom: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: true,
+        boxZoom: true,
+        geoclicker: true,
+        zoomControl: true,
+        fullscreenControl: true
+      });
+      DG.marker([43.356312, 132.171668]).addTo(map).bindPopup('Речевой кабинет Логокот. 3 этаж каб.302');;
+    });
+  </script>
   <script>
     var acc = document.getElementsByClassName("block-service__button-bar");
     var i;

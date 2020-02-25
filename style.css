@@ -422,6 +422,7 @@
 
 @media screen and (max-width: 720px) {
   .block-about__card {
+    padding: 0px 50px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
@@ -429,6 +430,13 @@
 
 .block-about__map {
   width: 100%;
+  height: 400px;
+}
+
+@media screen and (max-width: 550px) {
+  .block-about__map {
+    height: 300px;
+  }
 }
 
 .block-about__contact {
