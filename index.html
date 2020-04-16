@@ -19,7 +19,10 @@
 
   <!--Добавление API для 2гис-->
 
+  <!--
   <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
+ -->
+  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 
 
 
@@ -29,29 +32,60 @@
 
 <body class="body">
 
-  <header class="header-logo header-logo_flex">
-    <!--логотип и информация что это речевой кабинет-->
-    <div class="header-logo__img">
+
+  <!--логотип и информация что это речевой кабинет-->
+    <header class="header-logo header-logo_flex">
+      <div class="header-logo__img">
       <img src="img/logo_mini.svg" alt="Логокот" />
     </div>
     <h1 id="our-headline" class="header-logo__text">Речевой кабинет</h1>
   </header>
-  
+    
+
+
   <!--Навигационная панель-->
-  <nav class="nav-user nav-user_flex nav-user_text" id="button_bar">
+  
+    <nav class="nav-user nav-user_flex nav-user_text" id="button_bar">
     <a class="nav-user__item nav-user__item_link nav-user__item_disabled" href="#"><span class="fa fa-bars"
         onclick="navBar()"></span></a>
-    <a class="nav-user__item nav-user__item_link" href="#"><span class="fa fa-handshake"></span> Услуги</a>
-    <a class="nav-user__item nav-user__item_link" href="#"><span class="fa fa-user"></span> Специалисты</a>
-    <a class="nav-user__item nav-user__item_link" href="#"><span class="fa fa-envelope"></span> Контакты</a>
+    <a class="nav-user__item nav-user__item_link" href="#service"><span class="fa fa-handshake"></span> Услуги</a>
+    <a class="nav-user__item nav-user__item_link" href="#teachers"><span class="fa fa-user"></span> Специалисты</a>
+    <a class="nav-user__item nav-user__item_link" href="#about"><span class="fa fa-envelope"></span> Контакты</a>
     <a class="nav-user__item nav-user__item_link" href="#"><span class="fa fa-fw fa-briefcase"></span> Вакансии</a>
 
   </nav>
+  
+ 
+<!--  Бургер навигационная панель
+<div class="wrapper">-->
+  <!--Контент
+  <header class="header">
+    <div class="container">
+      <div class="header__body">
+        <a href="#" class="header__logo">
+          <img src="./img/logo_mini.svg" alt="Речевой кабинет ЛОГОКОТ">
+        </a>
+        <div class="header__burger">
+          <span></span>
+        </div>
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li><a href="" class="header__link">Услуги</a></li>
+            <li><a href="" class="header__link">Специалисты</a></li>
+            <li><a href="" class="header__link">Контакты</a></li>
+            <li><a href="" class="header__link">Вакансии</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</div>
+  -->
 
   <!--Блок направления-->
   <section class="block-direction">
     <div class="block-direction__contaner">
-      <h2 class="block-direction__text">Направления</h2>
+      <h2>Направления</h2>
       <ul class="block-direction__item block-direction__item_font block-direction__item_grid ">
         <li class="block-direction__li block-direction__li_flex"><img src="img/Tilda Icons 17ked Speech.svg" alt="">
           <span>Постановка правильного звукопроизношения</span></li>
@@ -72,17 +106,18 @@
   <!--Блок услуги-->
   <section class="block-service block-service_position">
     <div class="block-service__contaner">
-      <h2 class="block-service__text">Услуги</h2>
+      <h2> <a name="service"></a> Услуги</h2>
+      <!-- Консультации-->
       <button class="block-service__button-bar block-service__button-bar_text">Консультации</button>
-      <div class="block-service__price block-service__price_position block-service__price_accordion">
-        <ul class="block-service__card block-service__card_text">
-          <li class="block-service__card-header">Логопед</li>
+      <div class="block-service__price block-service__price_position-3 block-service__price_accordion">
+        <ul class="block-service__card ">
+          <li class="block-service__card-header">Логопед <br> <br></li>
           <li class="block-service__card-cost">&#8381 700</li>
           <li class="block-service__card-text">Продолжительность 30 минут</li>
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
         <ul class="block-service__card">
-          <li class="block-service__card-header">Дефектолог</li>
+          <li class="block-service__card-header">Дефектолог <br> <br></li>
           <li class="block-service__card-cost">&#8381 700</li>
           <li class="block-service__card-text">Продолжительность 30 минут</li>
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
@@ -94,9 +129,9 @@
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
       </div>
-
+      <!-- Занятия с логопедом-->
       <button class="block-service__button-bar block-service__button-bar_text">Занятия с логопедом</button>
-      <div class="block-service__price block-service__price_position block-service__price_accordion">
+      <div class="block-service__price block-service__price_position-2 block-service__price_accordion">
         <ul class="block-service__card block-service__card_text">
           <li class="block-service__card-header">Абонемент на индивидуальные занятия</li>
           <li class="block-service__card-cost">&#8381 4800 / месяц</li>
@@ -114,11 +149,11 @@
           <li class="block-service__card-button"><button class="button-price">Записаться</button></li>
         </ul>
       </div>
-
+      <!-- Занятия с дефектологом-->
       <button class="block-service__button-bar block-service__button-bar_text">Занятия с дефектологом</button>
-      <div class="block-service__price block-service__price_position block-service__price_accordion">
+      <div class="block-service__price block-service__price_position-2 block-service__price_accordion">
         <ul class="block-service__card">
-          <li class="block-service__card-header">Абонимент на индивидуальные занятия</li>
+          <li class="block-service__card-header">Абонимент на индивидуальные занятия <br> <br></li>
           <li class="block-service__card-cost">&#8381 4800 / месяц</li>
           <li class="block-service__card-text">8 занятий / 2 раза в неделю</li>
           <li class="block-service__card-text">Продолжительность 30 минут</li>
@@ -136,109 +171,11 @@
       </div>
     </div>
   </section>
+
   <!--блок преподаватели-->
 
-  <!-- Старая версия
-<section class="block-teachers">
-    <div class="block-teachers__contaner">
-      <h2 class="block-teachers__text">Преподаватели</h2>
-
-      <div class="block-teachers__info">
-
-        <img class="block-teachers__face" src="img/personal_elena.jpg" alt="">
-        <div class="block-teachers__card">
-          <ul>
-            <li class="block-teachers__name">Трапезникова Елена Олеговна</li>
-            <li class="block-teachers__title">Логопед</li>
-            <li class="block-teachers__about">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur repellat eveniet labore
-                at accusamus.
-              </p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque a alias maiores autem? Quo, velit.
-              </p>
-            </li>
-            <li class="block-teachers__social"><a href="#"><img src="img/instagram-icon-icons-com-66804.svg"
-                  style="width:37px; height: 37px;" alt="instagram-icon-icons-com-66804"></a></li>
-            <li class="block-teachers__phone"><button class="block-teachers__phone_button"><i
-                  class="fa fa-phone"></i></button> Заказать обратный звонок</li>
-
-          </ul>
-        </div>
-      </div>
-
-      <div class="block-teachers__info">
-
-        <div class="block-teachers__card">
-          <ul>
-            <li class="block-teachers__name">Руденко Яна Анатольевна</li>
-            <li class="block-teachers__title">Логопед-дефектолог</li>
-            <li class="block-teachers__about">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur repellat eveniet labore
-                at accusamus.
-              </p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque a alias maiores autem? Quo, velit.
-              </p>
-            </li>
-            <li class="block-teachers__social"><a href="#"><img src="img/instagram-icon-icons-com-66804.svg"
-                  style="width:37px; height: 37px;" alt="instagram-icon-icons-com-66804"></a></li>
-            <li class="block-teachers__phone"><button class="block-teachers__phone_button"><i
-                  class="fa fa-phone"></i></button> Заказать обратный звонок</li>
-          </ul>
-
-        </div>
-        <img class="block-teachers__face" src="img/elena_hat.jpg" alt="">
-      </div>
-
-      <div class="block-teachers__info">
-        <img class="block-teachers__face" src="img/elena_run.jpg" alt="">
-        <div class="block-teachers__card">
-          <ul>
-            <li class="block-teachers__name">Дробаха Дарья Васильевна</li>
-            <li class="block-teachers__title">Логопед</li>
-            <li class="block-teachers__about">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur repellat eveniet labore
-                at accusamus.
-              </p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque a alias maiores autem? Quo, velit.
-              </p>
-            </li>
-            <li class="block-teachers__social"><a href="#"><img src="img/instagram-icon-icons-com-66804.svg"
-                  style="width:37px; height: 37px;" alt="instagram-icon-icons-com-66804"></a></li>
-            <li class="block-teachers__phone"><button class="block-teachers__phone_button"><i
-                  class="fa fa-phone"></i></button> Заказать обратный звонок</li>
-          </ul>
-
-        </div>
-
-      </div>
-
-      <div class="block-teachers__info">
-        <div class="block-teachers__card">
-          <ul>
-            <li class="block-teachers__name">Квашина Юлия Сергеевна</li>
-            <li class="block-teachers__title">Специалист по подготовке к школе (дефектолог - стажёр)</li>
-            <li class="block-teachers__about">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur repellat eveniet labore
-                at accusamus.
-              </p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque a alias maiores autem? Quo, velit.
-              </p>
-            </li>
-            <li class="block-teachers__social"><a href="#"><img src="img/instagram-icon-icons-com-66804.svg"
-                  style="width:37px; height: 37px;" alt="instagram-icon-icons-com-66804"></a></li>
-            <li class="block-teachers__phone"><button class="block-teachers__phone_button"><i
-                  class="fa fa-phone"></i></button> Заказать обратный звонок</li>
-          </ul>
-
-        </div>
-        <img class="block-teachers__face" src="img/elena_run.jpg" alt="">
-      </div>
-
-    </div>
-  </section>
--->
-
   <section class="block-teachers">
+    <h2> <a name="teachers"></a> Преподаватели</h2>
     <div class="block-teachers__contaner block-teachers__contaner_position">
       <div class="block-teachers__card">
         <div class="block-teachers__image">
@@ -252,7 +189,7 @@
 
       <div class="block-teachers__card">
         <div class="block-teachers__image">
-          <img src="img/Елена.jpg" alt="">
+          <img src="img/Яна Анатольевна.jpeg" alt="">
         </div>
         <div class="block-teachers__info">
           <p class="block-teachers__name">Руденко Яна Анатольевна</p>
@@ -262,7 +199,7 @@
 
       <div class="block-teachers__card">
         <div class="block-teachers__image">
-          <img src="img/elena_hat.jpg" alt="">
+          <img src="img/Дарья Васильевна.jpeg" alt="">
         </div>
         <div class="block-teachers__info">
           <p class="block-teachers__name">Дробаха Дарья Васильевна</p>
@@ -293,7 +230,7 @@
 
   <section class="block-about">
     <div class="block-about__contaner">
-      <h2 class="block-about__text">О нас</h2>
+      <h2> <a name="about"></a> О нас</h2>
       <div class="block-about__card">
         <!--карта 2гис-->
         <div id="map" class="block-about__map"></div>
@@ -302,7 +239,7 @@
           <ul>
             <li class="block-about__head"><strong>Контакты</strong></li>
             <li class="block-about__info"> <strong>АДРЕС</strong>: <br> Артем, Амурская 21, Семейный центр
-              «Кругозор» каб. 303</li>
+              «Кругозор» каб. 302</li>
             <li class="block-about__info"><strong>ТЕЛЕФОН</strong>: <br> +7(953) 20 86 106</li>
             <li class="block-about__info"><strong>СОЦ СЕТИ</strong>: <br> <a href="#"><img
                   src="img/instagram-icon-icons-com-66804.svg" style="width:37px; height: 37px;"
@@ -317,33 +254,49 @@
 
   <section class="block-footer">
     <div class="block-footer__contaner">
-      <div class="block-footer__logo"><img src="/img/logo_mini.svg" alt="Речевой кабинет ЛОГОКОТ"></div>
-      <li>
-        <ul></ul>
-        <ul></ul>
-        <ul></ul>
-        <ul></ul>
-        <ul></ul>
-      </li>
+      <div class="block-footer__logo"> <img src="img/logo_mini_white.svg" alt="Речевой кабинет ЛОГОКОТ"></div>
+      <nav class="block-footer__nav">
+        <a class="block-footer__link" href="#service">Услуги</a>
+        <a class="block-footer__link" href="#teachers">Специалисты</a>
+        <a class="block-footer__link" href="#about">Контакты</a>
+        <a class="block-footer__link" href="#">Вакансии</a>
+      </nav>
     </div>
   </section>
+
+
   <script>
     DG.then(function () {
+      var myIcon;
       var map = DG.map('map', {
         center: [43.356312, 132.171668],
-        zoom: 16,
-        dragging: false,
+        zoom: 17,
+        dragging: true,
         touchZoom: false,
-        scrollWheelZoom: false,
+        scrollWheelZoom: true,
         doubleClickZoom: true,
         boxZoom: true,
         geoclicker: true,
         zoomControl: true,
         fullscreenControl: true
+
       });
-      DG.marker([43.356312, 132.171668]).addTo(map).bindPopup('Речевой кабинет Логокот. 3 этаж каб.302');;
+
+      coordinates = [[43.355813, 132.17166], [43.356138, 132.171765], [43.356065, 132.171654], [43.356049, 132.17181], [43.35613, 132.171754]];
+      polyline = DG.polyline(coordinates, {
+        color: 'blue'
+      })
+
+        .addTo(map)
+        .bindLabel('Я статическая подсказка!', {
+          static: true
+        });
+
+
     });
   </script>
+
+
   <script src="script_accordion.js"></script>
   <script src="script_burger.js"></script>
 

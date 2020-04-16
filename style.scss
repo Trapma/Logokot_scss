@@ -56,6 +56,21 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     color: black;
   }
 }
+%link-footer {
+  &:link {
+    color: white;
+  }
+  &:visited {
+    color: white;
+  }
+  &:hover {
+    color: white;
+    background-color: #999999;
+  }
+  &:active {
+    color: white;
+  }
+}
 %h2 {
   font-size: $h-size_s;
   text-align: center;
@@ -75,7 +90,14 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
   }
 }
 
-.body {
+h2 {
+  font-size: $h-size_s;
+  text-align: center;
+  font-family: $h-0;
+  padding: 20px;
+}
+body {
+  height: 100%;
   background-color: $body_bgc;
 }
 * {
@@ -132,19 +154,11 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    @media screen and (max-width:650px){
+    @media screen and (max-width: 650px) {
       flex-direction: column;
-     
-      }
     }
-  &__accordion {
-    @media screen and (max-width:650px) {
-    overflow: hidden;
-    max-height: 0px;
-    transition: max-height 0.5s ease-in-out;
-    }
-    
   }
+
   &__item {
     text-decoration: none;
     font-size: $nav-size_s;
@@ -154,20 +168,120 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     &_link {
       @extend %link-pseudo;
     }
+    &_link-footer {
+      @extend %link-footer;
+    }
     &_disabled {
       display: none;
     }
   }
 }
+/*Ограничительный блок бургер навигации*/
+.wrapper {
+  @extend %block;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+/*Основные стили бургер навигации*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+  }
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+  }
+  &__logo {
+    flex: 0 0 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    > img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  &__burger {
+    display: none;
+    @media screen and (max-width: 767px) {
+      
+      >span{
+        position: absolute;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+      }
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+
+      %before_after {
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+      }
+      
+      :before {
+        @extend %before_after;
+        content: "";
+        top: 0;
+      }
+      :after {
+        @extend %before_after;
+        content: "";
+        bottom: 0;
+      }
+    }
+  }
+
+  &__menu {
+  }
+  &__list {
+    display: flex;
+
+    > li {
+      list-style-type: none;
+      margin: 0px 0px 0px 20px;
+    }
+  }
+  &__link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
 
 .block-direction {
   @extend %block;
+  padding: 100px 0px 0px 0px;
 
   &__contaner {
     @extend %contaner;
-  }
-  &__text {
-    @extend %h2;
   }
   &__item {
     &_grid {
@@ -201,9 +315,6 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
   &__contaner {
     @extend %contaner;
   }
-  &__text {
-    @extend %h2;
-  }
   &__button-bar {
     padding: 15px;
     margin: 5px 0px;
@@ -225,6 +336,9 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
       font-family: $p-0;
       font-size: $nav-size_m;
       text-align: left;
+      @media screen and (max-width: 655px) {
+        font-size: $nav-size_s;
+      }
     }
   }
   &__active {
@@ -241,25 +355,40 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
       max-height: 0px;
       transition: max-height 0.5s ease-in-out;
     }
-
-    &_position {
+    &_position-1 {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      @media screen and (max-width: 655px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    &_position-2 {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      @media screen and (max-width: 655px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    &_position-3 {
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 10px;
+      @media screen and (max-width: 655px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
   &__card {
+    display: block;
     font-family: $p-0;
     border: 1px solid rgb(228, 228, 228);
-
     border-radius: 5px;
   }
   &__card-header {
     background-color: $block-service__card-header_bgc;
     font-size: $p-size_l;
-    padding: 15px;
+    line-height: 1.5em;
     text-align: center;
-    vertical-align: middle;
-    min-height: 70px;
+    padding: 10px;
   }
   &__card-cost {
     background-color: lightgrey;
@@ -301,6 +430,7 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
 }
 .block-teachers {
   @extend %block;
+
   &__contaner {
     display: grid;
     @extend %contaner;
@@ -317,6 +447,9 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     }
   }
   &__card {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0px 1px 10px;
   }
 
   &__image {
@@ -342,88 +475,24 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
   &__info {
   }
   &__name {
+    font-size: $p-size_l;
+    text-align: center;
+    line-height: 1.2em;
+    padding: 10px;
   }
   &__prof {
-  }
-}
-/*.block-teachers {
-  @extend %block;
-  &__contaner {
-    @extend %contaner;
-  }
-  &__text {
-    @extend %h2;
-  }
-  &__info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 10px 0px;
-    grid-gap: 0px 20px;
-  }
-  &__face {
-    width: 100%;
-  }
-  &__card {
-    font-family: p-0;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  &__name {
-    font-size: $p-size_l;
-    text-align: center;
-    padding: 15px;
-  }
-  &__title {
     font-size: $p-size_m;
     text-align: center;
-    padding: 10px;
-  }
-  &__exp {
-    font-size: $p-size_m;
-    text-align: center;
-    padding: 10px;
-  }
-  &__about {
-    font-size: $p-size_s;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
-    padding: 10px;
-  }
-  &__social {
-    text-align: center;
-    padding: 10px;
-  }
-  &__phone {
-    text-align: center;
-    font-size: $p-size_l;
-    padding: 10px;
-    &_button {
-      background-color: rgb(193, 193, 193);
-      width: 50px;
-      font-family: $p-0;
-      font-size: $p-size_l;
-      padding: 5px;
-      border: none;
-      border-radius: 5px;
-
-      cursor: pointer;
-
-      &:active {
-        background-color: rgb(82, 82, 82);
-      }
-    }
+    color: grey;
   }
 }
-*/
 
 .block-about {
   @extend %block;
-  &__contaner {
+  & {
     @extend %contaner;
   }
-  &__text {
-    @extend %h2;
-  }
+
   &__card {
     display: grid;
     grid-gap: 10px;
@@ -434,6 +503,8 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     }
   }
   &__map {
+    border: 1px solid gray;
+    border-radius: 5px;
     width: 100%;
     height: 400px;
     @media screen and (max-width: 550px) {
@@ -458,9 +529,32 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
 }
 
 .block-footer {
+  background-color: rgb(39, 38, 38);
   &__contaner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    @media screen and (max-width: 650px) {
+      grid-template-columns: 1fr;
+    }
   }
-  &__info {
-    background-color: red($color: #000000);
+  &__logo {
+    padding: 10px;
+    @media screen and (max-width: 450px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+    }
+  }
+  &__link {
+    @extend %link-footer;
+    padding: 15px;
   }
 }
