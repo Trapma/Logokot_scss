@@ -132,6 +132,18 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media screen and (max-width:650px){
+      flex-direction: column;
+     
+      }
+    }
+  &__accordion {
+    @media screen and (max-width:650px) {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.5s ease-in-out;
+    }
+    
   }
   &__item {
     text-decoration: none;
@@ -147,6 +159,7 @@ $block-service__card-header_bgc: #ffe4c4; //заголовок карточки
     }
   }
 }
+
 .block-direction {
   @extend %block;
 

@@ -36,8 +36,9 @@
     </div>
     <h1 id="our-headline" class="header-logo__text">Речевой кабинет</h1>
   </header>
+  
   <!--Навигационная панель-->
-  <nav class="nav-user nav-user_flex nav-user_text" class="noact" id="button_bar">
+  <nav class="nav-user nav-user_flex nav-user_text" id="button_bar">
     <a class="nav-user__item nav-user__item_link nav-user__item_disabled" href="#"><span class="fa fa-bars"
         onclick="navBar()"></span></a>
     <a class="nav-user__item nav-user__item_link" href="#"><span class="fa fa-handshake"></span> Услуги</a>
@@ -46,6 +47,7 @@
     <a class="nav-user__item nav-user__item_link" href="#"><span class="fa fa-fw fa-briefcase"></span> Вакансии</a>
 
   </nav>
+
   <!--Блок направления-->
   <section class="block-direction">
     <div class="block-direction__contaner">
@@ -342,25 +344,8 @@
       DG.marker([43.356312, 132.171668]).addTo(map).bindPopup('Речевой кабинет Логокот. 3 этаж каб.302');;
     });
   </script>
-  <script>
-    var acc = document.getElementsByClassName("block-service__button-bar");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click",
-        function () {
-          this.classList.toggle("block-service__active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-    }
-  </script>
-
-  <script src="script.js"></script>
+  <script src="script_accordion.js"></script>
+  <script src="script_burger.js"></script>
 
 </body>
 

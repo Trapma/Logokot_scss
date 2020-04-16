@@ -133,6 +133,24 @@
           align-items: center;
 }
 
+@media screen and (max-width: 650px) {
+  .nav-user_flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav-user__accordion {
+    overflow: hidden;
+    max-height: 0px;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
+  }
+}
+
 .nav-user__item {
   text-decoration: none;
   font-size: 1.25em;
