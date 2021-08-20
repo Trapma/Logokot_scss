@@ -320,6 +320,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+          align-items: center;
 }
 
 .block-service__button-bar {
